@@ -1,0 +1,124 @@
+{
+  "home": {
+    "name": "Ciril Arockiaraj",
+    "role": "Software Developer",
+    "comments": "I build exceptional digital experiences that combine creativity with cutting-edge technology.",
+    "socialLinks": [
+      {
+        "icon": "fab fa-linkedin-in",
+        "url": "https://linkedin.com/in/ciril-arockiaraj-s-b3085930b",
+        "label": "LinkedIn"
+      },
+      {
+        "icon": "fab fa-github",
+        "url": "https://github.com/cirilarockiaraj",
+        "label": "GitHub"
+      },
+      {
+        "icon": "fa-brands fa-x-twitter",
+        "url": "https://x.com/cirilarockiaraj",
+        "label": "X"
+      },
+      {
+        "icon": "fab fa-instagram",
+        "url": "https://www.instagram.com/ciril804?igsh=MTJ3MHBnaTdmbzZucw==",
+        "label": "Instagram"
+      },
+      {
+        "icon": "fab fa-facebook-f",
+        "url": "https://www.facebook.com/share/1GWyVgpoeo/",
+        "label": "Facebook"
+      }
+    ]
+  },
+  "about": {
+    "name": "Ciril Arockiaraj",
+    "role": "Software Developer",
+    "comments": "Passionate IT professional with over 5 years of experience in full-stack development. I specialize in building scalable web applications using modern technologies. My expertise spans across frontend frameworks, backend systems, and cloud infrastructure. I'm dedicated to writing clean, maintainable code and creating exceptional user experiences.",
+    "imageUrl": "https://customer-assets.emergentagent.com/job_webdev-ciril/artifacts/435mecje_profile.jpg",
+    "experience": "2+ years",
+    "projects": "10+ Projects",
+    "client": "1 Client",
+    "interests": [
+      "Web Development",
+      "AI & Machine Learning",
+      "API Development",
+      "Open Source"
+    ]
+  },
+  "skills": {
+    "mainSkills": [
+      {
+        "name": "HTML",
+        "percentage": 95,
+        "color": "#e34c26",
+        "description": "Expert in semantic HTML5, accessibility standards, and modern web markup best practices."
+      },
+      {
+        "name": "CSS",
+        "percentage": 90,
+        "color": "#264de4",
+        "description": "Proficient in CSS3, responsive design, flexbox, grid, animations, and preprocessors like SCSS."
+      },
+      {
+        "name": "JavaScript",
+        "percentage": 88,
+        "color": "#f0db4f",
+        "description": "Strong command of ES6+, async programming, DOM manipulation, and modern JavaScript frameworks."
+      },
+      {
+        "name": "Java",
+        "percentage": 85,
+        "color": "#5382a1",
+        "description": "Experienced in Java development, OOP principles, Spring Boot, and enterprise application development."
+      },
+      {
+        "name": "Python",
+        "percentage": 80,
+        "color": "#3776ab",
+        "description": "Skilled in Python for web development, data analysis, automation, and scripting with Django/Flask."
+      }
+    ],
+    "additionalSkills": [
+      "Angular",
+      "TypeScript",
+      "MongoDB",
+      "MS SQL",
+      "MySQL",
+      "Git",
+      "Tortoise SVN",
+      "REST APIs"
+    ]
+  },
+  "resume": {
+    "experience": [
+      {
+        "role": "Software Developer",
+        "company": "Newdream Data Systems",
+        "duration": "2001 - Present",
+        "comments": "Developed and maintained multiple client projects using React, Python, and PostgreSQL."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master of Science in Computer Science",
+        "institution": "St. Joseph's College(Autonomous), Tiruchirappalli",
+        "year": "2021 - 2023",
+        "description": "Specialized in Software Development and Data Science."
+      },
+      {
+        "degree": "Bachelor of Computer Applications",
+        "institution": "St. Joseph's College(Autonomous), Tiruchirappalli",
+        "year": "2018 - 2021",
+        "description": "Focused on core computer science subjects and programming."
+      }
+    ]
+  },
+  "contact": {
+    "address": "780, Mela theru, Mullaiyur, Viralimalai, Pudukkottai, Tamil Nadu.",
+    "phone": "+91 6382810644",
+    "email": "cirilarockiaraj@gmail.com",
+    "mapEmbedPath": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d713.8594576587499!2d78.5936403452824!3d10.605843346436743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1761965623877!5m2!1sen!2sin"
+  },
+  "resumeDownloadUrl": "https://drive.google.com/uc?export=download&id=1vVWl4bDvhMHY5pJCo_JnZLaffmrJZrcK"
+}
