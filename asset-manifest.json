@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cirilarockiaraj/ciril-profile.git/static/css/main.5fa56696.css",
+    "main.js": "/cirilarockiaraj/ciril-profile.git/static/js/main.b6d11692.js",
+    "index.html": "/cirilarockiaraj/ciril-profile.git/index.html",
+    "main.5fa56696.css.map": "/cirilarockiaraj/ciril-profile.git/static/css/main.5fa56696.css.map",
+    "main.b6d11692.js.map": "/cirilarockiaraj/ciril-profile.git/static/js/main.b6d11692.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fa56696.css",
+    "static/js/main.b6d11692.js"
+  ]
+}
