@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Briefcase, GraduationCap, Calendar, Download } from 'lucide-react';
+import { Briefcase, GraduationCap, Calendar, Download, Badge, User, File } from 'lucide-react';
 import portfolioData from '../data/portfolio.json';
+import { Avatar } from '@/components/ui/avatar';
 
 const Resume = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { experience, education } = portfolioData.resume;
+  const { experience, education, projects } = portfolioData.resume;
   const { resumeDownloadUrl } = portfolioData;
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const Resume = () => {
         {/* Page Title */}
         <div
           className={`text-center mb-16 transition-all duration-1000 transform ${
-            isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
           <h1 className="text-5xl font-bold mb-4">
@@ -29,7 +30,7 @@ const Resume = () => {
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
             My professional journey, education, and work experience
           </p>
-          
+
           {/* Download Button */}
           <a href={resumeDownloadUrl} download="Ciril_Arockiaraj_Resume.pdf">
             <Button
@@ -46,7 +47,9 @@ const Resume = () => {
           {/* Experience Section */}
           <div
             className={`mb-16 transition-all duration-1000 delay-200 transform ${
-              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
             }`}
           >
             <div className="flex items-center gap-3 mb-8">
@@ -74,8 +77,56 @@ const Resume = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <h3 className="text-lg font-semibold text-blue-400 mb-3">{exp.company}</h3>
-                    <p className="text-gray-400 leading-relaxed">{exp.comments}</p>
+                    <h3 className="text-lg font-semibold text-blue-400 mb-3">
+                      {exp.company}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {exp.comments}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div
+            className={`mb-16 transition-all duration-1000 delay-200 transform ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center">
+                <File className="text-blue-400" size={24} />
+              </div>
+              <h2 className="text-3xl font-bold">Projects</h2>
+            </div>
+
+            <div className="space-y-6">
+              {projects.map((pro, index) => (
+                <Card
+                  key={index}
+                  className="bg-slate-900 border-slate-800 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group"
+                >
+                  <CardHeader>
+                    <CardTitle className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+                      <span className="text-2xl text-white group-hover:text-blue-400 transition-colors">
+                        {pro.name}
+                      </span>
+                      <span className="flex items-center gap-2 text-sm text-gray-400">
+                        <User size={16} />
+                        {pro.client}
+                      </span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h3 className="text-lg font-semibold text-blue-400 mb-3">
+                      {pro.technologies}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {pro.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -85,7 +136,9 @@ const Resume = () => {
           {/* Education Section */}
           <div
             className={`transition-all duration-1000 delay-400 transform ${
-              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
             }`}
           >
             <div className="flex items-center gap-3 mb-8">
@@ -116,7 +169,9 @@ const Resume = () => {
                     <h3 className="text-lg font-semibold text-blue-400 mb-3">
                       {edu.institution}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed">{edu.description}</p>
+                    <p className="text-gray-400 leading-relaxed">
+                      {edu.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}

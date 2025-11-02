@@ -1,7 +1,7 @@
 {
   "home": {
     "name": "Ciril Arockiaraj",
-    "role": "Software Developer",
+    "role": "Software Developer | Full Stack Developer | AI - Research & Prompting",
     "comments": "I build exceptional digital experiences that combine creativity with cutting-edge technology.",
     "socialLinks": [
       {
@@ -34,10 +34,10 @@
   "about": {
     "name": "Ciril Arockiaraj",
     "role": "Software Developer",
-    "comments": "Passionate IT professional with over 5 years of experience in full-stack development. I specialize in building scalable web applications using modern technologies. My expertise spans across frontend frameworks, backend systems, and cloud infrastructure. I'm dedicated to writing clean, maintainable code and creating exceptional user experiences.",
+    "comments": "Passionate IT professional with over 2+ years of experience in full-stack development. I specialize in building scalable web applications using modern technologies. My expertise spans across frontend frameworks, backend systems, and cloud infrastructure. I'm dedicated to writing clean, maintainable code and creating exceptional user experiences.",
     "imageUrl": "https://customer-assets.emergentagent.com/job_webdev-ciril/artifacts/435mecje_profile.jpg",
     "experience": "2+ years",
-    "projects": "10+ Projects",
+    "projects": "5+ Projects",
     "client": "1 Client",
     "interests": [
       "Web Development",
@@ -50,37 +50,44 @@
     "mainSkills": [
       {
         "name": "HTML",
-        "percentage": 95,
+        "percentage": 80,
         "color": "#e34c26",
         "description": "Expert in semantic HTML5, accessibility standards, and modern web markup best practices."
       },
       {
         "name": "CSS",
-        "percentage": 90,
+        "percentage": 60,
         "color": "#264de4",
         "description": "Proficient in CSS3, responsive design, flexbox, grid, animations, and preprocessors like SCSS."
       },
       {
         "name": "JavaScript",
-        "percentage": 88,
+        "percentage": 65,
         "color": "#f0db4f",
         "description": "Strong command of ES6+, async programming, DOM manipulation, and modern JavaScript frameworks."
       },
       {
         "name": "Java",
-        "percentage": 85,
+        "percentage": 80,
         "color": "#5382a1",
         "description": "Experienced in Java development, OOP principles, Spring Boot, and enterprise application development."
       },
       {
+        "name": "Guidewire",
+        "percentage": 40,
+        "color": "#5382a1",
+        "description": "Experienced in guidewire policy form patterns, custom form inference, and entities"
+      },
+      {
         "name": "Python",
-        "percentage": 80,
+        "percentage": 70,
         "color": "#3776ab",
         "description": "Skilled in Python for web development, data analysis, automation, and scripting with Django/Flask."
       }
     ],
     "additionalSkills": [
       "Angular",
+      "React",
       "TypeScript",
       "MongoDB",
       "MS SQL",
@@ -96,7 +103,27 @@
         "role": "Software Developer",
         "company": "Newdream Data Systems",
         "duration": "2001 - Present",
-        "comments": "Developed and maintained multiple client projects using React, Python, and PostgreSQL."
+        "comments": "Developed and maintained multiple client projects using Guidewire, Spring Boot, Angular, React and Python."
+      }
+    ],
+    "projects": [
+      {
+        "name": "Guidewire policy center",
+        "client": "Western Reserve Group",
+        "technologies": "Gosu and entities",
+        "description": "Developed custom functionalities and Configurations for the Guidewire Policy Center using Gosu programming language and entity configurations to meet client-specific insurance business requirements."
+      },
+      {
+        "name": "MuleSoft to SnapLogic Migration",
+        "client": "Internal Product",
+        "technologies": "Angular, Spring Boot",
+        "description": "Developed MuleSoft to SnapLogic migration tool using Angular for frontend and Spring Boot for backend services to facilitate seamless data integration and migration processes."
+      },
+      {
+        "name": "AI - Research",
+        "client": "Internal Product",
+        "technologies": "Python, AWS Betrock, Azure AI Foundary",
+        "description": "Developed Applications using AI models with LLM and RAG libraries to enhance data processing and analysis capabilities."
       }
     ],
     "education": [

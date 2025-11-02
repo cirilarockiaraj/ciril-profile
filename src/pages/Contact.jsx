@@ -4,15 +4,16 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
-import { useToast } from '../hooks/use-toast';
+// import { useToast } from '@/hooks/use-toast';
 import portfolioData from '../data/portfolio.json';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useRef();
-  const { toast } = useToast();
+  // const { toast } = useToast();
   const { address, phone, email, mapEmbedPath } = portfolioData.contact;
 
   useEffect(() => {
@@ -31,10 +32,25 @@ const Contact = () => {
 
     try {
       await emailjs.sendForm(serviceId, templateId, form.current, publicKey);
-      toast({
-        title: 'Success!',
-        description: 'Your message has been sent successfully.',
-        variant: 'default',
+      // toast({
+      //   title: 'Success!',
+      //   description: 'Your message has been sent successfully.',
+      //   variant: 'default',
+      // });
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Email sent successfully",
       });
       form.current.reset();
     } catch (error) {

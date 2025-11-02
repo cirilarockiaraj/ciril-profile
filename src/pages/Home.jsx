@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Download } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import portfolioData from '../data/portfolio.json';
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { ArrowRight, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import portfolioData from "../data/portfolio.json";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +20,9 @@ const Home = () => {
           {/* Hero Content */}
           <div
             className={`transition-all duration-1000 transform ${
-              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
             }`}
           >
             <div className="mb-6">
@@ -30,7 +32,7 @@ const Home = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Hi, I'm{' '}
+              Hi, I'm{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {name}
               </span>
@@ -48,14 +50,17 @@ const Home = () => {
             <div className="flex flex-wrap gap-4 mb-16">
               <Link to="/contact">
                 <Button
-                  size="lg"
+                  size="sm"
                   className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
                 >
                   Get In Touch
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
-              <a href={resumeDownloadUrl} download="Ciril_Arockiaraj_Resume.pdf">
+              <a
+                href={resumeDownloadUrl}
+                download="Ciril_Arockiaraj_Resume.pdf"
+              >
                 <Button
                   size="lg"
                   variant="outline"
@@ -86,7 +91,10 @@ const Home = () => {
 
           {/* Animated Background Elements */}
           <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
         </div>
       </div>
     </div>
