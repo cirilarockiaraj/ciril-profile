@@ -55,10 +55,20 @@ const Contact = () => {
       form.current.reset();
     } catch (error) {
       console.error('EmailJS Error:', error);
-      toast({
-        title: 'Error',
-        description: 'Failed to send message. Please try again later.',
-        variant: 'destructive',
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "error",
+        title: "Failed to send message. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);

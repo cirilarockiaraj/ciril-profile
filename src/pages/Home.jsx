@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-      <div className="container mx-auto px-6 pt-32 pb-20">
+      <div className="container mx-auto px-6 pt-32 pb-20 relative overflow-hidden">
         <div className="max-w-4xl mx-auto">
           {/* Hero Content */}
           <div
@@ -47,24 +47,21 @@ const Home = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mb-16">
-              <Link to="/contact">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-16">
+              <Link to="/contact" className="w-full sm:w-auto">
                 <Button
                   size="sm"
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
+                  className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
                 >
                   Get In Touch
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
-              <a
-                href={resumeDownloadUrl}
-                download="Ciril_Arockiaraj_Resume.pdf"
-              >
+              <a href={resumeDownloadUrl} download="Ciril_Arockiaraj_Resume.pdf" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-slate-600 text-white hover:bg-slate-800 px-8 py-6 rounded-full transition-all duration-300 hover:scale-105"
+                  className="w-full sm:w-auto border-2 border-slate-600 text-white hover:bg-slate-800 px-8 py-6 rounded-full transition-all duration-300 hover:scale-105"
                 >
                   <Download className="mr-2" size={20} />
                   Download Resume
@@ -90,9 +87,9 @@ const Home = () => {
           </div>
 
           {/* Animated Background Elements */}
-          <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="hidden sm:block absolute top-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse pointer-events-none -z-10" />
           <div
-            className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"
+            className="hidden sm:block absolute bottom-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse pointer-events-none -z-10"
             style={{ animationDelay: "1s" }}
           />
         </div>

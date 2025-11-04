@@ -7,7 +7,7 @@ import { Avatar } from '@/components/ui/avatar';
 
 const Resume = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { experience, education, projects } = portfolioData.resume;
+  const { experience, education } = portfolioData.resume;
   const { resumeDownloadUrl } = portfolioData;
 
   useEffect(() => {
@@ -15,13 +15,11 @@ const Resume = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white pt-24 pb-20">
+    <div className="min-h-screen bg-slate-950 text-white pt-24 pb-20 animated-gradient">
       <div className="container mx-auto px-6">
         {/* Page Title */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`text-center mb-16 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
         >
           <h1 className="text-5xl font-bold mb-4">
             My <span className="text-blue-400">Resume</span>
@@ -46,11 +44,7 @@ const Resume = () => {
         <div className="max-w-4xl mx-auto">
           {/* Experience Section */}
           <div
-            className={`mb-16 transition-all duration-1000 delay-200 transform ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
-            }`}
+            className={`mb-16 ${isVisible ? "animate-fade-up" : "opacity-0"}`}
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center">
@@ -63,7 +57,7 @@ const Resume = () => {
               {experience.map((exp, index) => (
                 <Card
                   key={index}
-                  className="bg-slate-900 border-slate-800 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group"
+                  className="bg-slate-900 border-slate-800 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group animate-scale-in glow-on-hover"
                 >
                   <CardHeader>
                     <CardTitle className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
@@ -89,7 +83,7 @@ const Resume = () => {
             </div>
           </div>
 
-          <div
+          {/* <div
             className={`mb-16 transition-all duration-1000 delay-200 transform ${
               isVisible
                 ? "translate-y-0 opacity-100"
@@ -103,43 +97,21 @@ const Resume = () => {
               <h2 className="text-3xl font-bold">Projects</h2>
             </div>
 
-            <div className="space-y-6">
-              {projects.map((pro, index) => (
-                <Card
-                  key={index}
-                  className="bg-slate-900 border-slate-800 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group"
-                >
-                  <CardHeader>
-                    <CardTitle className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-                      <span className="text-2xl text-white group-hover:text-blue-400 transition-colors">
-                        {pro.name}
-                      </span>
-                      <span className="flex items-center gap-2 text-sm text-gray-400">
-                        <User size={16} />
-                        {pro.client}
-                      </span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h3 className="text-lg font-semibold text-blue-400 mb-3">
-                      {pro.technologies}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {pro.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+            <Card className="bg-slate-900 border-slate-800">
+              <CardContent className="p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <p className="text-gray-300">
+                  I moved projects to a dedicated page for a better browsing experience.
+                </p>
+                <a href="#/projects">
+                  <Button className="bg-blue-500 hover:bg-blue-600">View Projects</Button>
+                </a>
+              </CardContent>
+            </Card>
+          </div> */}
 
           {/* Education Section */}
           <div
-            className={`transition-all duration-1000 delay-400 transform ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
-            }`}
+            className={`${isVisible ? "animate-fade-up" : "opacity-0"}`}
           >
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center">
@@ -152,7 +124,7 @@ const Resume = () => {
               {education.map((edu, index) => (
                 <Card
                   key={index}
-                  className="bg-slate-900 border-slate-800 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group"
+                  className="bg-slate-900 border-slate-800 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group animate-scale-in glow-on-hover"
                 >
                   <CardHeader>
                     <CardTitle className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">

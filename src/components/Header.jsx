@@ -18,6 +18,7 @@ const Header = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
+    { path: '/projects', label: 'Projects' },
     { path: '/skills', label: 'Skills' },
     { path: '/resume', label: 'Resume' },
     { path: '/contact', label: 'Contact' },
@@ -25,7 +26,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         scrolled ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
       }`}
     >
@@ -65,6 +66,7 @@ const Header = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white hover:text-blue-400 transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -72,7 +74,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3 animate-in fade-in slide-in-from-top-5 duration-300 bg-slate-900/95 backdrop-blur-sm rounded-lg p-4">
+          <div className="md:hidden fixed top-16 left-0 right-0 z-[110] p-4">
+            <div className="space-y-3 animate-in fade-in slide-in-from-top-5 duration-300 bg-slate-900/95 backdrop-blur-md rounded-lg p-4 shadow-xl border border-slate-800">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -87,6 +90,7 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
+            </div>
           </div>
         )}
       </nav>

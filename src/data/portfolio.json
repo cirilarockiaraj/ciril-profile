@@ -2,7 +2,7 @@
   "home": {
     "name": "Ciril Arockiaraj",
     "role": "Software Developer | Full Stack Developer | AI - Research & Prompting",
-    "comments": "I build exceptional digital experiences that combine creativity with cutting-edge technology.",
+    "comments": "I design and develop intelligent, high-performance digital solutions that merge innovation with modern technology to deliver outstanding user experiences.",
     "socialLinks": [
       {
         "icon": "fab fa-linkedin-in",
@@ -34,7 +34,7 @@
   "about": {
     "name": "Ciril Arockiaraj",
     "role": "Software Developer",
-    "comments": "Passionate IT professional with over 2+ years of experience in full-stack development. I specialize in building scalable web applications using modern technologies. My expertise spans across frontend frameworks, backend systems, and cloud infrastructure. I'm dedicated to writing clean, maintainable code and creating exceptional user experiences.",
+    "comments": "Motivated software developer with over 2+ years of hands-on experience in full-stack development. Skilled in building scalable, high-quality web and enterprise applications using modern technologies. My expertise covers frontend frameworks, backend architecture, and cloud deployment. I take pride in writing clean, efficient code and crafting seamless, user-centric digital experiences.",
     "imageUrl": "https://customer-assets.emergentagent.com/job_webdev-ciril/artifacts/435mecje_profile.jpg",
     "experience": "2+ years",
     "projects": "5+ Projects",
@@ -52,37 +52,37 @@
         "name": "HTML",
         "percentage": 80,
         "color": "#e34c26",
-        "description": "Expert in semantic HTML5, accessibility standards, and modern web markup best practices."
+        "description": "Proficient in writing semantic, standards-compliant HTML5 code optimized for accessibility and performance across modern browsers."
       },
       {
         "name": "CSS",
         "percentage": 60,
         "color": "#264de4",
-        "description": "Proficient in CSS3, responsive design, flexbox, grid, animations, and preprocessors like SCSS."
+        "description": "Skilled in crafting responsive and visually appealing layouts using CSS3, Flexbox, Grid, and modern animation techniques, including SCSS pre-processing."
       },
       {
         "name": "JavaScript",
         "percentage": 65,
         "color": "#f0db4f",
-        "description": "Strong command of ES6+, async programming, DOM manipulation, and modern JavaScript frameworks."
+        "description": "Strong understanding of ES6+, asynchronous programming, DOM manipulation, and building dynamic interfaces using modern JavaScript frameworks."
       },
       {
         "name": "Java",
         "percentage": 80,
         "color": "#5382a1",
-        "description": "Experienced in Java development, OOP principles, Spring Boot, and enterprise application development."
+        "description": "Experienced in Java application development using OOP principles, Spring Boot framework, and building scalable enterprise-grade backends."
       },
       {
         "name": "Guidewire",
         "percentage": 40,
         "color": "#5382a1",
-        "description": "Experienced in guidewire policy form patterns, custom form inference, and entities"
+        "description": "Hands-on experience with Guidewire PolicyCenter, including policy form patterns, entity configuration, and custom form inference logic."
       },
       {
         "name": "Python",
         "percentage": 70,
         "color": "#3776ab",
-        "description": "Skilled in Python for web development, data analysis, automation, and scripting with Django/Flask."
+        "description": "Proficient in Python for web applications, automation, and data-driven systems using frameworks such as Flask and Django."
       }
     ],
     "additionalSkills": [
@@ -103,27 +103,27 @@
         "role": "Software Developer",
         "company": "Newdream Data Systems",
         "duration": "2023 - Present",
-        "comments": "Developed and maintained multiple client projects using Guidewire, Spring Boot, Angular, React and Python."
+        "comments": "Contributed to the development and maintenance of enterprise-grade applications using Guidewire, Spring Boot, Angular, React, and Python. Collaborated closely with cross-functional teams to deliver robust, efficient, and scalable solutions."
       }
     ],
     "projects": [
       {
         "name": "Guidewire policy center",
         "client": "Western Reserve Group",
-        "technologies": "Gosu and entities",
-        "description": "Developed custom functionalities and Configurations for the Guidewire Policy Center using Gosu programming language and entity configurations to meet client-specific insurance business requirements."
+        "technologies": "Gosu, entities, policy form patterns, custom form inference",
+        "description": "Engineered custom functionalities and configurations for the Guidewire PolicyCenter using Gosu programming and entity design, tailored to meet complex client-specific insurance workflows and data requirements."
       },
       {
         "name": "MuleSoft to SnapLogic Migration",
         "client": "Internal Product",
         "technologies": "Angular, Spring Boot",
-        "description": "Developed MuleSoft to SnapLogic migration tool using Angular for frontend and Spring Boot for backend services to facilitate seamless data integration and migration processes."
+        "description": "Developed a migration framework to convert MuleSoft workflows into SnapLogic pipelines using Angular and Spring Boot, enabling seamless API integration, transformation, and automated data migration."
       },
       {
         "name": "AI - Research",
         "client": "Internal Product",
-        "technologies": "Python, AWS Betrock, Azure AI Foundary",
-        "description": "Developed Applications using AI models with LLM and RAG libraries to enhance data processing and analysis capabilities."
+        "technologies": "Python, AWS Bedrock, Azure AI Foundry",
+        "description": "Built intelligent AI-driven applications leveraging LLMs and RAG architectures for data extraction, reasoning, and analysis using AWS Bedrock and Azure AI Foundry ecosystems."
       }
     ],
     "education": [
@@ -131,13 +131,13 @@
         "degree": "Master of Science in Computer Science",
         "institution": "St. Joseph's College(Autonomous), Tiruchirappalli",
         "year": "2021 - 2023",
-        "description": "Specialized in Software Development and Data Science."
+        "description": "Specialized in software engineering, data science, and advanced computing methodologies, focusing on real-world software development practices."
       },
       {
         "degree": "Bachelor of Computer Applications",
         "institution": "St. Joseph's College(Autonomous), Tiruchirappalli",
         "year": "2018 - 2021",
-        "description": "Focused on core computer science subjects and programming."
+        "description": "Gained a strong foundation in computer science principles, programming, and software design through practical projects and coursework."
       }
     ]
   },

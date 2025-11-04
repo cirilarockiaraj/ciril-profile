@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-950 text-gray-400 py-8 border-t border-slate-800">
+    <footer className="bg-slate-950 text-gray-400 py-8 pb-20 lg:pb-8 border-t border-slate-800">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 text-sm">
@@ -25,6 +25,9 @@ const Footer = () => {
             </Link>
             <Link to="/about" className="hover:text-blue-400 transition-colors">
               About
+            </Link>
+            <Link to="/projects" className="hover:text-blue-400 transition-colors">
+              Projects
             </Link>
             <Link to="/contact" className="hover:text-blue-400 transition-colors">
               Contact
