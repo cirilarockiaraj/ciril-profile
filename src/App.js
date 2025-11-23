@@ -11,6 +11,7 @@ import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Projects from "./pages/Projects";
+import ChatAI from "./pages/ChatAI";
 import { Toaster } from "@/components/ui/toaster";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/chat" element={<ChatAI />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
