@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ciril-profile/static/css/main.42c7f27b.css",
-    "main.js": "/ciril-profile/static/js/main.09c60d6a.js",
+    "main.js": "/ciril-profile/static/js/main.8b1ceba1.js",
     "index.html": "/ciril-profile/index.html",
     "main.42c7f27b.css.map": "/ciril-profile/static/css/main.42c7f27b.css.map",
-    "main.09c60d6a.js.map": "/ciril-profile/static/js/main.09c60d6a.js.map"
+    "main.8b1ceba1.js.map": "/ciril-profile/static/js/main.8b1ceba1.js.map"
   },
   "entrypoints": [
     "static/css/main.42c7f27b.css",
-    "static/js/main.09c60d6a.js"
+    "static/js/main.8b1ceba1.js"
   ]
 }
