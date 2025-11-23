@@ -74,7 +74,7 @@ function simpleMarkdownToHtml(md) {
 }
 
 const ChatAI = () => {
-  const API_KEY = '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';
+  const API_KEY = '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';
 
   const [resumeContent] = useState(`Ciril Arockiaraj S
 Trichy, India | 6382810644 | cirilarockiaraj@gmail.com
@@ -224,6 +224,10 @@ ADDITIONAL INFORMATION
       });
 
       if (!response.ok) {
+        // Provide a clearer message for 401 so deployed apps give helpful guidance
+        if (response.status === 401) {
+          throw new Error('Authentication failed (401). Possible causes: the API key is invalid or revoked, the key is restricted to certain origins, or the key was removed during the build. Do NOT embed secret keys in client-side code for production. Recommended fixes: verify the key in your OpenRouter dashboard, rotate the key, or move requests to a server-side proxy (see README).');
+        }
         throw new Error(`API request failed: ${response.status} ${response.statusText}`);
       }
 
