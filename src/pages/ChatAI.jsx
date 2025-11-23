@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { AlertCircle, Send, Trash2, Copy, Check, Sparkles, RefreshCw } from 'lucide-react';
+import portfolioData from '../data/portfolio.json';
 
 function escapeHtml(unsafe) {
   return unsafe
@@ -74,7 +75,7 @@ function simpleMarkdownToHtml(md) {
 }
 
 const ChatAI = () => {
-  const API_KEY = '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';
+  const API_KEY = portfolioData?.openRouterApiKey || '';
 
   const [resumeContent] = useState(`Ciril Arockiaraj S
 Trichy, India | 6382810644 | cirilarockiaraj@gmail.com
