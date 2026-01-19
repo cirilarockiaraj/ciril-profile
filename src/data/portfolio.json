@@ -124,6 +124,12 @@
         "client": "Internal Product",
         "technologies": "Python, AWS Bedrock, Azure AI Foundry",
         "description": "Built intelligent AI-driven applications leveraging LLMs and RAG architectures for data extraction, reasoning, and analysis using AWS Bedrock and Azure AI Foundry ecosystems."
+      },
+      {
+        "name": "CESR2 (Cession - Excel to requirement)",
+        "client": "Portfolio",
+        "technologies": "Python, Azure AI Foundry, Angular",
+        "description": "Developed an AI-based system to extract Excel formulas and translate them into clear, user-friendly business explanations. Implemented backend logic using Python and Azure AI Foundry (OpenAI 4.1) to interpret formulas accurately, and built an Angular-based frontend to present formulas, mappings, and derived business logic. Worked extensively on mapping Excel tables, row and column labels, and formula dependencies to improve explanation accuracy, while ensuring structured and reliable outputs suitable for regulatory and financial use cases."
       }
     ],
     "education": [
@@ -147,6 +153,6 @@
     "email": "cirilarockiaraj@gmail.com",
     "mapEmbedPath": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d713.8594576587499!2d78.5936403452824!3d10.605843346436743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1761965623877!5m2!1sen!2sin"
   },
-  "resumeDownloadUrl": "https://drive.google.com/uc?export=download&id=1vVWl4bDvhMHY5pJCo_JnZLaffmrJZrcK",
+  "resumeDownloadUrl": "https://drive.google.com/uc?export=download&id=1Y5OsehOhGvP6bphSLsRxnIf3QzEt4iuC",
   "openRouterApiKey": "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"
 }

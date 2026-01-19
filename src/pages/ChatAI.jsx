@@ -78,67 +78,58 @@ const ChatAI = () => {
   const API_KEY = portfolioData?.openRouterApiKey || '';
 
   const [resumeContent] = useState(`Ciril Arockiaraj S
-Trichy, India | 6382810644 | cirilarockiaraj@gmail.com
-www.linkedin.com/in/ciril-arockiaraj-s-b3085930b | https://github.com/cirilarockiaraj
+Software Developer 
+cirilarockiaraj@gmail.com | https://linkedin.com/in/ciril-arockiaraj-s-b3085930b | https://cirilarockiaraj.github.io/ciril-profile/ | 
++91-6382810644
+Profile Summary 
+Software Developer with 2+ years of experience in enterprise application development, system integration, 
+and AI-driven solutions. Strong background in Guidewire PolicyCenter customization, backend development using 
+Java Spring Boot, and Python-based AI research projects. Hands-on experience in migrating integration platforms 
+(MuleSoft to SnapLogic), building intelligent document processing solutions for complex PDFs and Excel files, and 
+developing business logic explainers using LLMs. Adept at working across insurance, banking, and regulatory 
+domains, with a focus on automation, accuracy, and scalable system design.
 
-PROFESSIONAL SUMMARY
-A highly motivated and detail-oriented Software Developer with over 2 years of experience at Newdream Data Systems. Adept at designing and developing APIs, with a strong foundation in software development and problem-solving. Currently contributing to the conversion product development team, providing innovative solutions through deep learning and thorough analysis. A friendly, engaging team player with a passion for technology and continuous learning.
+Technical Skills
+Core Java, Python, Spring Boot, Fast API, Flask, MS SQL Server, Selenium, HTML, CSS, Angular, Azure AI 
+Foundry, Open AI APIs
 
-TECHNICAL SKILLS
-• Languages: [Core Java, J2EE, Python (Basics), HTML 5, CSS 3, JavaScript]
-• Libraries: [React (Basics), Bootstrap 5]
-• Frameworks: [Spring Boot, Angular (Basics)]
-• Databases: [MySQL, MongoDB, MS SQL]
-• Tools: [Git, GitHub, Tortoise SVN, Guidewire Studio, IntelliJ IDEA, Eclipse, NetBeans, VS Code]
-• Other: [RESTful APIs]
-
-PROFESSIONAL EXPERIENCE
-Software Developer – Newdream Data Systems [Trichy] | [March 2023 – Present]
-• Started my professional journey as a Guidewire Developer, specializing in "PolicyCenter" for one year. During this time, I was responsible for designing insurance forms and templates using Guidewire technologies. I worked on various projects involving PCF, forms, data mapping, XML, and DiffTree projects.
-• Developed and maintained automation scripts for internal projects using Selenium over a span of six months, greatly enhancing the efficiency and reliability of business processes.
-• Currently serving as a Software Developer in the Internal Conversion Product Team, where I apply problem-solving skills and in-depth analysis to develop effective solutions for time-consuming challenges. I proficiently utilize "Java", "Spring Boot", and "MySQL" to create API solutions.
-• Developed and integrated "RESTful APIs"
-
-EDUCATION
-Master of Science in Computer Science – St. Joseph's College (Autonomous) [Trichy] | [June 2021 – April 2023]
-• Relevant coursework: [Cyber Security, Data Structures, Web Technologies, Databases]
-• CGPA 8.4
-
-Bachelor of Computer Applications – St. Joseph's College (Autonomous) [Trichy] | [June 2018 – April 2021]
-• Relevant coursework: [Web Technologies, Data Structures, Algorithms]
-• CGPA 7.51
-
-CERTIFICATIONS
-• [Java Full Stack] | [Issuer: Udemy] | [2025] – Currently Pursuing
-
-PROJECTS
-Company Project – Billing [Junior Software Developer] | [March 2023 – October 2024]
-Project name: WRG
-Client: WRG (US)
-Description: WRG (Western Reserve Group) is US Based Insurance Company. Currently providing commercial and business lines for Indiana and Ohio states.
-Technology: GOSU
-Tools: Guidewire Studio, Smart COMM Advanced Template Designer
-Operating System: Windows
-Responsibility & Contribution:
-• Requirement Analysis
-• Implement the functionality in terms of code
-• Unit test and fix the bugs/issues
-Team Size: 10
-Client site: https://wrg-ins.com/
-
-Academic Project
-Project name: Electricity Board
-Description: Java-based application, developed using JSP and Servlets, allows users to request new electricity connections, pay their electricity bills, and manage both consumer and employee portfolios—all within a single application.
-Key achievement: All EB-related services are provided in a single application, which includes a consumer login feature.
-Technology: JavaScript, Ajax, Bootstrap 5, JSP, Servlet
-Tools: NetBeans IDE
-GitHub: https://github.com/cirilarockiaraj/Electricity-Board.git
-
-ADDITIONAL INFORMATION
-• Languages: [English (Medium Conversational), Tamil (Conversational)]
-• Comfortable working under pressure, consistently meeting deadlines and delivering high-quality solutions in fast-paced environments.
-• A dedicated team player, always willing to lend support and share knowledge to achieve team goals.
-• Prepared to engage with new technologies.`);
+Professional Experience
+Software Developer 
+[Newdream Data Systems] | [Duration: March 2023 – Present]
+Guidewire Development
+• Developed and customized Guidewire PolicyCenter forms and entities, ensuring alignment with 
+business and insurance domain requirements.
+• Worked on data modeling, UI configurations, and validation logic within Guidewire frameworks.
+• Collaborated with functional teams to translate business rules into configurable Guidewire components.
+Integration Migration: MuleSoft to SnapLogic
+• Played a key role in migrating integration workflows from MuleSoft to SnapLogic.
+• Designed and implemented backend services using Java Spring Boot to support SnapLogic pipelines.
+• Converted existing MuleSoft logic into optimized SnapLogic pipelines while maintaining data integrity 
+and performance.
+• Worked with JSON templates and REST APIs to ensure seamless system communication.
+AI Research – Intelligent PDF Chatbot
+• Designed and developed an AI-based PDF chatbot capable of handling complex, lengthy documents 
+such as bank statements and financial reports.
+• Implemented solutions using Python, Azure AI Foundry (OpenAI 4.1), and ChromaDB for semantic 
+search and retrieval.
+• Built document ingestion pipelines including text extraction, chunking, embedding generation, and 
+contextual Q&A.
+• Focused on accuracy, performance, and handling unstructured financial data.
+CESR2 Project – Excel Formula Business Explanation
+• Developed an AI-assisted system to extract Excel formulas and convert them into clear business 
+explanations.
+• Implemented backend logic using Python and Azure AI Foundry (OpenAI 4.1) for formula 
+interpretation and reasoning.
+• Built a frontend interface using Angular to display extracted formulas, mappings, and business logic 
+explanations.
+• Worked extensively on mapping Excel tables, row/column labels, and formula dependencies to improve 
+explanation accuracy.
+• Ensured regulatory and financial data clarity for end users through structured outputs.
+Education
+• Master of Science in Computer Science (2021 – 2023) 
+St. Joseph’s College (Autonomous), Tiruchirappalli. 
+• Bachelor of Computer Applications (2018 – 2021) 
+St. Joseph’s College (Autonomous), Tiruchirappalli.`);
 
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState(() => {
@@ -219,7 +210,7 @@ ADDITIONAL INFORMATION
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'x-ai/grok-4.1-fast:free',
+          model: 'xiaomi/mimo-v2-flash:free',
           messages: apiMessages,
         }),
       });
