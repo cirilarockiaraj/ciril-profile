@@ -75,61 +75,9 @@ function simpleMarkdownToHtml(md) {
 }
 
 const ChatAI = () => {
-  const API_KEY = portfolioData?.openRouterApiKey || '';
+  const API_KEY = portfolioData?.chatbot?.apiKey || '';
 
-  const [resumeContent] = useState(`Ciril Arockiaraj S
-Software Developer 
-cirilarockiaraj@gmail.com | https://linkedin.com/in/ciril-arockiaraj-s-b3085930b | https://cirilarockiaraj.github.io/ciril-profile/ | 
-+91-6382810644
-Profile Summary 
-Software Developer with 2+ years of experience in enterprise application development, system integration, 
-and AI-driven solutions. Strong background in Guidewire PolicyCenter customization, backend development using 
-Java Spring Boot, and Python-based AI research projects. Hands-on experience in migrating integration platforms 
-(MuleSoft to SnapLogic), building intelligent document processing solutions for complex PDFs and Excel files, and 
-developing business logic explainers using LLMs. Adept at working across insurance, banking, and regulatory 
-domains, with a focus on automation, accuracy, and scalable system design.
-
-Technical Skills
-Core Java, Python, Spring Boot, Fast API, Flask, MS SQL Server, Selenium, HTML, CSS, Angular, Azure AI 
-Foundry, Open AI APIs
-
-Professional Experience
-Software Developer 
-[Newdream Data Systems] | [Duration: March 2023 – Present]
-Guidewire Development
-• Developed and customized Guidewire PolicyCenter forms and entities, ensuring alignment with 
-business and insurance domain requirements.
-• Worked on data modeling, UI configurations, and validation logic within Guidewire frameworks.
-• Collaborated with functional teams to translate business rules into configurable Guidewire components.
-Integration Migration: MuleSoft to SnapLogic
-• Played a key role in migrating integration workflows from MuleSoft to SnapLogic.
-• Designed and implemented backend services using Java Spring Boot to support SnapLogic pipelines.
-• Converted existing MuleSoft logic into optimized SnapLogic pipelines while maintaining data integrity 
-and performance.
-• Worked with JSON templates and REST APIs to ensure seamless system communication.
-AI Research – Intelligent PDF Chatbot
-• Designed and developed an AI-based PDF chatbot capable of handling complex, lengthy documents 
-such as bank statements and financial reports.
-• Implemented solutions using Python, Azure AI Foundry (OpenAI 4.1), and ChromaDB for semantic 
-search and retrieval.
-• Built document ingestion pipelines including text extraction, chunking, embedding generation, and 
-contextual Q&A.
-• Focused on accuracy, performance, and handling unstructured financial data.
-CESR2 Project – Excel Formula Business Explanation
-• Developed an AI-assisted system to extract Excel formulas and convert them into clear business 
-explanations.
-• Implemented backend logic using Python and Azure AI Foundry (OpenAI 4.1) for formula 
-interpretation and reasoning.
-• Built a frontend interface using Angular to display extracted formulas, mappings, and business logic 
-explanations.
-• Worked extensively on mapping Excel tables, row/column labels, and formula dependencies to improve 
-explanation accuracy.
-• Ensured regulatory and financial data clarity for end users through structured outputs.
-Education
-• Master of Science in Computer Science (2021 – 2023) 
-St. Joseph’s College (Autonomous), Tiruchirappalli. 
-• Bachelor of Computer Applications (2018 – 2021) 
-St. Joseph’s College (Autonomous), Tiruchirappalli.`);
+  const [resumeContent] = useState(portfolioData?.chatbot?.resume_content || '');
 
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState(() => {
@@ -196,11 +144,11 @@ St. Joseph’s College (Autonomous), Tiruchirappalli.`);
         { role: 'assistant', content: '', time: Date.now(), isTyping: true },
       ]);
 
-      const systemMessage = `You are a helpful assistant that answers questions about a candidate using only the information provided in the resume below. Be concise, accurate, and professional.\n\nResume:\n\n${resumeContent}`;
+      const systemMessage = `You are the expert to explain the employee's resume for the user asked question.`;
 
       const apiMessages = [
         { role: 'system', content: systemMessage },
-        { role: 'user', content: question },
+        { role: 'user', content: `Resume: ${resumeContent}\n\nQuestion: ${question}` },
       ];
 
       const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -210,7 +158,7 @@ St. Joseph’s College (Autonomous), Tiruchirappalli.`);
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'xiaomi/mimo-v2-flash:free',
+          model: portfolioData?.chatbot?.model,
           messages: apiMessages,
         }),
       });
