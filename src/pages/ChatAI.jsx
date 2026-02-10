@@ -148,7 +148,7 @@ const ChatAI = () => {
 
       const apiMessages = [
         { role: 'system', content: systemMessage },
-        { role: 'user', content: `Resume: ${resumeContent}\n\nQuestion: ${question}` },
+        { role: 'user', content: `Current Date and time: ${new Date().toLocaleString()} \n\nResume: ${resumeContent}\n\nQuestion: ${question}` },
       ];
 
       const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
