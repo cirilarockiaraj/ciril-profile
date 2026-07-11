@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { HumanMessage, SystemMessage } from "@langchain/core/messages";
+import { HumanMessage, SystemMessage, AIMessage } from "@langchain/core/messages";
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { AlertCircle, Send, Trash2, Copy, Check, Sparkles, RefreshCw } from 'lucide-react';
 import portfolioData from '../data/portfolio.json';
@@ -77,8 +77,26 @@ function simpleMarkdownToHtml(md) {
 }
 
 const ChatAI = () => {
-  const encodedKey = process.env.REACT_APP_GEMINI_API_KEY || '';
-  const API_KEY = encodedKey ? atob(encodedKey) : (portfolioData?.chatbot?.apiKey || '');
+  const getApiKey = () => {
+    const key = process.env.REACT_APP_GEMINI_API_KEY || '';
+    if (!key) {
+      return portfolioData?.chatbot?.apiKey || '';
+    }
+    if (key.startsWith('AIzaSy')) {
+      return key;
+    }
+    try {
+      const decoded = atob(key);
+      if (decoded.startsWith('AIzaSy')) {
+        return decoded;
+      }
+    } catch (e) {
+      // ignore decoding error
+    }
+    return key;
+  };
+
+  const API_KEY = getApiKey();
 
   const [resumeContent] = useState(portfolioData?.chatbot?.resume_content || '');
 
@@ -138,7 +156,7 @@ const ChatAI = () => {
       ]);
 
       const model = new ChatGoogleGenerativeAI({
-        model: portfolioData?.chatbot?.model || "gemini-1.5-flash",
+        model: portfolioData?.chatbot?.model || "gemini-3.5-flash",
         maxOutputTokens: 2048,
         apiKey: API_KEY,
       });
@@ -147,7 +165,14 @@ const ChatAI = () => {
       
       const promptMessages = [
         new SystemMessage(systemPrompt),
-        new HumanMessage(`Question: ${question}`)
+        ...messages.filter(m => m.content && !m.isTyping).map((m) => {
+          if (m.role === 'user') {
+            return new HumanMessage(m.content);
+          } else {
+            return new AIMessage(m.content);
+          }
+        }),
+        new HumanMessage(question)
       ];
 
       const stream = await model.stream(promptMessages);
