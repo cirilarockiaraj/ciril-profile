@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[674],{2674:(e,n,s)=>{s.d(n,{Mistral:()=>r.d});var r=s(7021)}}]);
