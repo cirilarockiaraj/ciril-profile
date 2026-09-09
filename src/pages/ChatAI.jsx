@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import { ChatMistralAI } from "@langchain/mistralai";
 import { HumanMessage, SystemMessage, AIMessage } from "@langchain/core/messages";
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { AlertCircle, Send, Trash2, Copy, Check, Sparkles, RefreshCw } from 'lucide-react';
@@ -78,18 +79,16 @@ function simpleMarkdownToHtml(md) {
 
 const ChatAI = () => {
   const getApiKey = () => {
-    const key = process.env.REACT_APP_GEMINI_API_KEY || '';
+    let key = process.env.MISTRAL_API_KEY || '';
     if (!key) {
-      return portfolioData?.chatbot?.apiKey || '';
+      key = portfolioData?.chatbot?.apiKey || '';
     }
     if (key.startsWith('AIzaSy')) {
       return key;
     }
     try {
       const decoded = atob(key);
-      if (decoded.startsWith('AIzaSy')) {
-        return decoded;
-      }
+      return decoded;
     } catch (e) {
       // ignore decoding error
     }
@@ -155,8 +154,8 @@ const ChatAI = () => {
         { role: 'assistant', content: '', time: Date.now(), isTyping: true },
       ]);
 
-      const model = new ChatGoogleGenerativeAI({
-        model: portfolioData?.chatbot?.model || "gemini-3.5-flash",
+      const model = new ChatMistralAI({
+        model: portfolioData?.chatbot?.model || "mistral-large-2407",
         maxOutputTokens: 2048,
         apiKey: API_KEY,
       });
